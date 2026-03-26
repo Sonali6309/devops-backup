@@ -1,0 +1,36 @@
+1. Security Policies
+Disallow privileged containers
+Disallow hostPath volumes
+Restrict capabilities
+Run as non-root
+Block host networking
+
+2. Cost Optimization Policies (Your focus)
+Require CPU/memory requests
+Require limits
+Restrict replicas
+Enforce quotas
+Limit resource usage
+
+3. Best Practices Policies
+Require labels
+Require annotations
+Disallow latest image tag
+Enforce naming conventions
+
+4. Governance Policies
+Restrict namespaces
+Enforce RBAC
+Restrict node selectors
+Enforce instance types
+
+5. Mutation Policies
+Add default labels
+Inject sidecars
+Add resource defaults
+
+6. Generate Policies
+Auto-create:
+NetworkPolicies
+ResourceQuotas
+LimitRanges

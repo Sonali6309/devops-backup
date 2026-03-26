@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring
+  namespace: demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mycost
+  template:
+    metadata:
+      labels:
+        app: mycost
+    spec:
+      containers:
+      - name: petclinic
+        image: sonali5672/spring-petclinic:v16
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "200Mi"
+          limits:
+            cpu: "200m"
+            memory: "300Mi"  
